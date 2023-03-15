@@ -13,9 +13,9 @@ jobs:
       uses: actions/checkout@v2
 
     #- name: Install SnowSQL CLI
-     # run: |
-      #  curl -O https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.2/linux_x86_64/snowsql-1.2.18-linux_x86_64.bash
-       # bash snowsql-1.2.18-linux_x86_64.bash
+    #  run: |
+    #    curl -O https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.2/linux_x86_64/snowsql-1.2.18-linux_x86_64.bash
+    #    bash snowsql-1.2.18-linux_x86_64.bash
 
     - name: Create role and user
       env:
@@ -24,7 +24,5 @@ jobs:
         SNOWSQL_PASSWORD: ${{ secrets.SNOWSQL_PASSWORD }}
         SNOWSQL_ROLE: <Snowflake role name>
      # run: |
-       # snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD -r $SNOWSQL_ROLE -q "CREATE ROLE my_role;"
-        #snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD -r $SNOWSQL_ROLE -q "CREATE USER my_user PASSWORD 'my_password';"
-      #  echo 'CREATE SESSION POLICY my_session_policy FROM JSON '\''file://session_policy.json'\'';' | snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD  
-  
+      #  snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD -r $SNOWSQL_ROLE -q "CREATE ROLE my_role;"
+       # snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD -r $SNOWSQL_ROLE -q "CREATE USER my_user PASSWORD 'my_password';"
