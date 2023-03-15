@@ -26,11 +26,5 @@ jobs:
       #run: |
        # snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD -r $SNOWSQL_ROLE -q "CREATE ROLE my_role;"
         #snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD -r $SNOWSQL_ROLE -q "CREATE USER my_user PASSWORD 'my_password';"
-		
-	- name: Create session policy
-      #env:
-       # SNOWSQL_ACCOUNT: <Snowflake account name>
-        #SNOWSQL_USER: <Snowflake user name>
-        #SNOWSQL_PASSWORD: ${{ secrets.SNOWSQL_PASSWORD }}
-     run: |
-      echo 'CREATE SESSION POLICY my_session_policy FROM JSON '\''file://session_policy.json'\'';' | snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD
+        echo 'CREATE SESSION POLICY my_session_policy FROM JSON '\''file://session_policy.json'\'';' | snowsql -a $SNOWSQL_ACCOUNT -u $SNOWSQL_USER -p $SNOWSQL_PASSWORD  
+  
